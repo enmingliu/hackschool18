@@ -1,0 +1,59 @@
+* {
+	margin: 0;
+	padding: 0;
+	/* border: solid 2px red; */
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background-color: black;
+	height: 100%;
+	display: flex; /* flexbox */
+	flex-wrap: wrap; /* child items too big, wrap around screen */
+}
+
+h1 {
+	position: absolute;
+	color: white;
+	font-family: 'Comic Sans MS';
+}
+
+@keyframes dance {
+	0% {transform: rotate(5deg);}
+	50% {transform: rotate(-5deg);}
+	100% {transform: rotate(5deg);}
+}
+
+img {
+	height: 100px;
+	width: 100px;
+	animation: dance 1s linear infinite;
+}
+
+.ghost-container {
+	/* border: solid 2px blue; */
+	height: 300px;
+	display: flex;
+	/* flex-direction: column; */
+	justify-content: space-around; /* justifying content to space around */
+	align-items: center;
+	flex: 0 0 50%; /* flexbox should take 50% of screen */
+}
+
+@media (max-width: 1000px) { /* if width of screen is under 1000px, flexbox should take 100% of screen  */
+	.ghost-container {
+		flex: 0 0 100%;
+	}
+}
+
+.down {
+	align-self: flex-end; /* algining with end or start of flexbox */
+	animation-delay: 0.5s;
+}
+
+.up {
+	align-self: flex-start;
+}
