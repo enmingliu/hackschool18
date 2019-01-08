@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const posts = new Map(); //object like a dictionary, mapping from ine value to another, representing a collection of key-value pairs, faster for data storage
+const posts = new Map(); //object like a dictionary, mapping from one value to another, representing a collection of key-value pairs, faster for data storage
 
 router.post('/:user', (req, res) => { //POST localhost:3000/post/Bill { "name" : "Joe" }
 	const body = req.body;
